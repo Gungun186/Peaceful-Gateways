@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Trip - PeacefulGateways</title>
+
+    <link rel="icon" href="favicon.jpg" type="image/jpg">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            background-color: #f4f4f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 18px;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color:white;
+            color: #f4f4f9;
+            border: none;
+            cursor: pointer;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #005bb5;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+    <img src="logo.png" height="200px" width="300px">
+    </td><td>
+    <h1 style="font-family: 'Lucida Handwriting';font-size: 30px;padding-left: 60px;"> Peaceful Gateways</h1>
+    <p style="font-size: 20px;text-align: center;padding-left: 160px;">"Where peace meets paradise"</p>
+    </td>
+    </tr>
+    </table><br><br>
+    <table><tr height="25px;" style="background-color: rgb(125, 186, 165);">
+        <td width="300px"height="50px"> </td>
+             <td width="200px" style="padding-left: 70px;font-family: 'Times New Roman'; font-size: 20px;"><a href="project.html">Home</a></td>
+             <td width="200px" style="padding-left: 70px;font-family: 'Times New Roman';font-size: 20px;"><a href="contact.html">ContactUs</a></td> 
+             
+             <td width="1050px"> </td>
+         </tr>
+         </table><br><br><table>
+            
+<header>
+    <h1>Book Your Dream Trip</h1>
+</header>
+
+<div class="container">
+    <h2>Fill Out the Form Below to Book Your Trip</h2>
+    <form action="submit_form.php" method="POST">
+        <div class="form-group">
+            <label for="destination">Destination</label>
+            <select name="destination" id="destination" required>
+                <option value="India">India</option>
+                <option value="Switzerland">Switzerland</option>
+                <option value="Dubai">Dubai</option>
+                <option value="New York">New York</option>
+                <option value="New York">Singapore</option>
+                <option value="New York">Paris</option>
+                <option value="New York">Hongkong</option>
+               
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="start_date">Start Date</label>
+            <input type="date" id="start_date" name="start_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="end_date">End Date</label>
+            <input type="date" id="end_date" name="end_date" required>
+        </div>
+
+        <div class="form-group">
+            <label for="num_people">Number of People</label>
+            <input type="number" id="num_people" name="num_people" min="1" required>
+        </div>
+
+        <div class="form-group">
+            <label for="special_request">Special Requests (optional)</label>
+            <textarea id="special_request" name="special_request" rows="4" placeholder="Any special requests, dietary needs, etc."></textarea>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Book Trip">
+        </div>
+    </form>
+</div>
+
+</body>
+</html>

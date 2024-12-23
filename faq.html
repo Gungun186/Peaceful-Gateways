@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - PeacefulGateways</title>
+    <link rel="icon" href="favicon.jpg" type="image/jpg">
+    <style>
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+            color: #333;
+        }
+
+        header {
+           
+            color: black;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        /* FAQ section styling */
+        .faq-container {
+            width: 80%;
+            margin: 30px auto;
+            background-color: #f4f4f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-container h2 {
+            text-align: center;
+            font-size: 32px;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+
+        /* Accordion styling */
+        .faq-item {
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .faq-item:hover {
+            background-color: #e1e1e1;
+        }
+
+        .faq-item.active {
+            background-color: #0066cc;
+            color: white;
+        }
+
+        .faq-answer {
+            padding: 15px;
+            margin-top: 10px;
+            background-color: #f4f4f4;
+            display: none;
+            border-radius: 8px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        
+    </style>
+</head>
+<body>
+<header>
+    <table>
+        <tr>
+            <td>
+    <img src="logo.png" height="300px" width="500px">
+    </td><td>
+    <h1 style="font-family: 'Lucida Handwriting';font-size: 60px;"> Peaceful Gateways</h1>
+    <p style="font-size: 30px;text-align: center;">"Where peace meets paradise"</p>
+    </td>
+    </tr>
+    </table></header>
+    <br><br>
+    <table><tr height="25px;" style="background-color: rgb(125, 186, 165);">
+   <td width="300px"height="50px"> </td>
+        <td width="200px" style="padding-left: 70px;font-family: 'Times New Roman'; font-size: 20px;"><a href="project.html">Home</a></td>
+        <td width="200px" style="padding-left: 70px;font-family: 'Times New Roman';font-size: 20px;"><a href="contact.html">Contact</a></td> 
+        
+        <td width="1050px"> </td>
+    </tr>
+    </table><br><br>
+<header>
+    <h1>Frequently Asked Questions (FAQ)</h1>
+</header>
+
+<div class="faq-container">
+    <h2>General Travel Questions</h2>
+
+    <div class="faq-item">
+        <strong>1. How do I book a trip?</strong>
+        <div class="faq-answer">
+            You can book a trip through our website by selecting your desired destination, choosing your travel dates, and completing the booking form. You can also contact our customer support team for assistance.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <strong>2. What is included in my travel package?</strong>
+        <div class="faq-answer">
+            Our travel packages typically include flights, accommodation, transportation, and sightseeing tours. Specific inclusions will vary depending on the package you choose.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <strong>3. Can I customize my itinerary?</strong>
+        <div class="faq-answer">
+            Yes! We offer customizable travel packages. You can select your preferred destinations, activities, and accommodations. Contact our team for further details and to create your perfect itinerary.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <strong>4. Are meals included in the travel package?</strong>
+        <div class="faq-answer">
+            The inclusion of meals depends on the specific package you choose. Some packages include all meals, while others offer breakfast only or have meals at additional cost.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <strong>5. Do I need travel insurance?</strong>
+        <div class="faq-answer">
+            While travel insurance is not mandatory, it is highly recommended to protect yourself against unforeseen circumstances like trip cancellations, lost baggage, or medical emergencies.
+        </div>
+    </div>
+
+    <h2>Destination-Specific Questions</h2>
+
+    <div class="faq-item">
+        <strong>6. What are the best times to visit India?</strong>
+        <div class="faq-answer">
+            The best time to visit India depends on the region. Generally, October to March is the most favorable time as the weather is pleasant, especially in the north. For the beaches of Goa and Kerala, the winter months are ideal.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <strong>7. What are the top places to visit in Switzerland?</strong>
+        <div class="faq-answer">
+            Switzerland is renowned for its picturesque landscapes. Top destinations include the Swiss Alps (for skiing and hiking), Lucerne, Zermatt, Interlaken, and the cities of Zurich and Geneva.
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <strong>8. Is Dubai a family-friendly destination?</strong>
+        <div class="faq-answer">
+            Yes, Dubai is a fantastic destination for families. It has numerous attractions such as Dubai Parks and Resorts, the Dubai Aquarium, the Global Village, and various shopping malls with entertainment options.
+        </div>
+    </div>
+</div>
+
+<script>
+    // JavaScript for Accordion Effect
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const answer = item.querySelector('.faq-answer');
+            if (answer.style.display === "block") {
+                answer.style.display = "none";
+                item.classList.remove('active');
+            } else {
+                answer.style.display = "block";
+                item.classList.add('active');
+            }
+        });
+    });
+</script>
+
+</body>
+</html>
